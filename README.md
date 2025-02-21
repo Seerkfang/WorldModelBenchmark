@@ -58,7 +58,7 @@ Should you encounter any data samples potentially breaching the copyright or lic
 
 ## Contact
 - Dacheng Li: dacheng177@berkeley.edu
-- Yunhao Fang: seerkfang@gmail.com
+- Yunhao Fang: yuf026@ucsd.edu
 - Song Han: songhan@mit.edu
 - Yao Lu: jasonlu@nvidia.com
 
