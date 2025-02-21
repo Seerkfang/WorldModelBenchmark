@@ -2,7 +2,7 @@
 
 [**🌐 Homepage**](https://seerkfang.github.io/world-model-benchmark.github.io/) | [**🏆 Leaderboard**](https://seerkfang.github.io/world-model-benchmark.github.io/#leaderboard) | [**📖 WorldModelBench arXiv**](https://arxiv.org/pdf/2311.16502.pdf)
 
-This repo contains the evaluation instruction for the paper "[WorldModelBench: Judging Video Generation Models As World Models]([https://arxiv.org/abs/2409.02813](https://drive.google.com/drive/folders/1mBBGM1E14JlmXmqRFonlqs76d9uBBZ0T?usp=drive_link))".
+This repo contains the evaluation instructions for the paper "[WorldModelBench: Judging Video Generation Models As World Models](https://drive.google.com/drive/folders/1mBBGM1E14JlmXmqRFonlqs76d9uBBZ0T?usp=drive_link)".
 
 ## 🔔News
 
