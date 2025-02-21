@@ -14,6 +14,8 @@ This repo contains the evaluation instruction for the paper "[WorldModelBench: J
 
 WorldModelBencha is a benchmark designed to evaluate the **world modeling capabilities** of video generation models across **7** application-driven domains (spanning from Robotics, Driving, Industry, Human Activities, Gaming, Animation, and Natural) and **56** subdomains. Each domain features 50 carefully curated prompts, comprising a text description and an initial video frame, tailored for video generation. We provide a **human-aligned** VLM (Vision-Language Model) based judger to automatically evaluate model-generated videos on **Instruction Following**, **Common Sense**, and **Physical Adherence**.
 
+![Alt text](worldmodelbench.png)
+
 ## Evaluation
 
 🎯 Please refer to the following instructions to evaluate with WorldModelBench:
