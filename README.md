@@ -50,7 +50,7 @@ The ```worldmodelbench.json``` has a list of dict containing instances for video
 python evaluate.py --video_dir GENERATED_VIDEOS --judge PATH_TO_JUDGE --save_name RESULTS_FILE
 ```
 
-The answers and explanations for the test set questions are withheld. You can submit your model's predictions for the **test set** on **[EvalAI](https://eval.ai/web/challenges/challenge-page/2179/overview)**.
+The answers and explanations for the test set questions are withheld. You can [reach out](https://github.com/Seerkfang/WorldModelBenchmark#contact) to the organizers to submit your results for the leaderboard.
 
 ## Disclaimers
 The guidelines for the annotators emphasized strict compliance with copyright and licensing rules from the initial data source, specifically avoiding materials from websites that forbid copying and redistribution. 
