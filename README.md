@@ -19,10 +19,36 @@ WorldModelBencha is a benchmark designed to evaluate the **world modeling capabi
 ## Evaluation
 
 🎯 Please refer to the following instructions to evaluate with WorldModelBench:
-
-- **We have released a full suite comprising 150 development samples and 900 validation samples. However, the 10,500 test questions are available without their answers.**
-- Use the **development set** for few-shot/in-context learning.
-- Use the **validation set** for debugging models, selecting hyperparameters, and quick evaluations.
+- **Environment Setup**: Clone and install VILA by following the instructions in [VILA Installation Guide](https://github.com/NVlabs/VILA?tab=readme-ov-file#installation).
+- **Data&Model Preparation**: Download [WorldModelBench test set](https://huggingface.co/datasets/Efficient-Large-Model/worldmodelbench) and the [judge](https://huggingface.co/Efficient-Large-Model/vila-ewm-qwen2-1.5b) separately.
+```
+└── worldmodelbench
+    └── images (first frames of videos)
+    └── evaluation.py (evaluation script)
+    └── worldmodelbench.json (test set)
+    ...
+```
+The ```worldmodelbench.json``` has a list of dict containing instances for video generation.
+```
+[
+  {
+          "domain": "autonomous vehicle",
+          "subdomain": "Stopping",
+          "text_first_frame": "The autonomous vehicle approaches a traffic light on a bridge surrounded by tall buildings. Construction barriers line the sides of the bridge with a yellow traffic light visible ahead.",
+          "text_instruction": "The autonomous vehicle stops at the traffic light on the bridge.",
+          "first_frame": "images/69620089860948e38a4921dd4869d24f.jpg"
+      }
+...
+]
+```
+- **Video Generation**: Perform video generation model inference. You will find 350 test instances in the worldmodelbench.json file. For *each instance*, follow the instructions below to generate the videos:
+  - **Text-to-Video**: Use the following as the generation prompt: ```" ".join([instance["text_first_frame"], instance["text_instruction"]])```.
+  - **Image-to-Video**: Use the following as the generation prompt: ```instance["first_frame"] + instance["text_instruction"]```.
+**Note**: Please save the video using the **same name** as ```instance["first_frame"]```, replacing the file extension ```.jpg``` with ```.mp4```.
+- **Evaluation**:
+```
+python evaluate.py --video_dir GENERATED_VIDEOS --judge PATH_TO_JUDGE --save_name RESULTS_FILE
+```
 
 The answers and explanations for the test set questions are withheld. You can submit your model's predictions for the **test set** on **[EvalAI](https://eval.ai/web/challenges/challenge-page/2179/overview)**.
 
